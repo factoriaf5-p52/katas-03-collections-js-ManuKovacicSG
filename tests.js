@@ -4,7 +4,7 @@ const expect = chai.expect;
 describe("Colecciones en JS: Array", () => {
     it("Pueden crearse usando [ ]", () => {
 
-        // crea un array "a" usando los corchetes []
+        // crea un array "a" usando los corchetes [] git add
 
         expect(Array.isArray(a)).to.be.true;
     })
