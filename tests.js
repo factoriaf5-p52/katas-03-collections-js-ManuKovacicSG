@@ -30,7 +30,7 @@ describe("Colecciones en JS: Array", () => {
         let list = [10, "foo", true, "pepe"];
 
         // completa la definición que falta usando la propiedad length
-
+        
         expect(list.length).to.equal(4);
     })
     it("Nos permiten acceder a cada elemento del array", () => {
@@ -47,15 +47,15 @@ describe("Colecciones en JS: Array", () => {
         let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
 
         // Añade el código que permite modificar el elemento correspondiente
-
+        fruits[1] = "Pera"
         expect(fruits).to.have.same.members(["Piña", "Pera", "Fresa", "Melón"])
     })
 
     it("Podemos añadir elementos", () => {
         let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
-
+        
         // Añade el código que permite modificar la lista (incluyendo un elemento al final)
-
+        fruits[fruits.length] = "Pera"
         expect(fruits).to.have.same.members(["Piña", "Manzana", "Fresa", "Melón", "Pera"])
     })
 })
@@ -68,6 +68,7 @@ describe("Ejemplos resueltos: Operaciones iterables", () => {
         function multiplicarPor2(num) {
             return num * 2;
         }
+        
 
         // utiliza la función map para aplicar la función multiplicarPor2 a los números de la lista
         // SOLUCIÓN: 
@@ -151,9 +152,12 @@ describe("Operaciones iterables", () => {
 
         let list = [1,5,7,9,11,13];
 
-        // utiliza la función map para aplicar los números de la lista
-        list = "???";
+        function restarUno(num) {
+            return num - 1;
+        }
         
+        // utiliza la función map para aplicar los números de la lista
+        list = list.map(restarUno)        
 
         expect(list).to.have.same.members([0,4,6,8,10,12]);
     })
@@ -162,8 +166,13 @@ describe("Operaciones iterables", () => {
 
         let list = ["Pikachu", "Charmander", "Magikarp"];
 
+        function textReplace(string) {
+            return string + ", te elijo a ti!";
+        }
+        
+       
         // utiliza la función map para aplicar los números de la lista y guardar la nueva lista en result
-                
+        let result = list.map(textReplace);
         expect(result).to.have.same.members([
             "Pikachu, te elijo a ti!",
             "Charmander, te elijo a ti!",
