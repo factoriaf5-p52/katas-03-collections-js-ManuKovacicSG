@@ -4,20 +4,24 @@ const expect = chai.expect;
 describe("Colecciones en JS: Array", () => {
     it("Pueden crearse usando [ ]", () => {
 
-        // crea un array "a" usando los corchetes [] git add
+        // crea un array "a" usando los corchetes []
+
+        const a = [];
 
         expect(Array.isArray(a)).to.be.true;
     })
     it("Pueden crearse usando new Array", () => {
 
         // crea un array "a" usando el constructor "new"
-
+        const a = new Array()
         expect(Array.isArray(a)).to.be.true;
     })
     it("Pueden estar vacíos o contener elementos", () => {
 
         // crea un array que esté vacío y otro que no esté vacío
-
+        const emptyArray = []
+        const nonEmptyArray = ["a"]
+        
         expect(emptyArray).to.be.empty;
         expect(nonEmptyArray).not.to.be.empty;
     })
